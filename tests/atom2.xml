@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>funputer.biz</title>
+<link href="https://funputer.biz/feed.xml" rel="self" />
+<link href="https://funputer.biz/" />
+<id>https://funputer.biz/</id>
+<rights>Case Duckworth</rights>
+<updated>2024-04-24T22:16:07Z</updated>
+<entry>
+<id>https://funputer.biz//lam_00.lam.html</id>
+<link rel="alternate" href="https://funputer.biz//lam_00.lam.html" />
+<title>lam 00. lam!</title>
+<author><name>Case Duckworth</name></author>
+<updated>2024-04-21T03:40:37Z</updated>
+<content type="html"><![CDATA[<main><p>I'm implementing a lisp.
+In lua.
+For fun!!</p>
+<img src="https://git.acdw.net/lam/plain/logo.png"
+alt="the lam logo: an MS Paint style sheep"
+style="float:right;"
+title="thanks to m455 for this shitty lisp logo" />
+<p>It's called <em>lam</em>, which could be</p>
+<ul>
+<li>short for a <b>L</b>isp <b>A</b>cdw <b>M</b>ade</li>
+<li>a reversal of MAL, the popular <em>make a lisp</em> project</li>
+<li>the thing you go on when a <em>scheme goes wrong</em></li>
+<li>.... other things .... ????</li>
+</ul>
+<p>
+<em>Anyway</em>, in this series I'm going to take you on a tour
+of all the parts of lam, from the reader to the types to evaluating
+and all the rest.
+Along the way, I'll talk about my successes, failures, false starts,
+and everything else that comes with trying something new.
+Stay tuned, yall :)
+</p>
+<h2>general plan for posts</h2>
+<p>I'm planning on covering each lua module in
+<a href="https://git.acdw.net/lam">lam</a> in turn,
+and in roughly this order:</p>
+<ol>
+<li><b>read</b>, where I convert program text into a lisp structure
+(one of the benefits of lisp is that the AST <i>is</i> the code)
+</li>
+<li><b>type</b>, where I define all the types of the language
+as well as a few utility functions</li>
+<li><b>eval</b>, where the read-in forms are evaluated to produce a
+value</li>
+<li><b>load</b> and <b>repl</b>,
+closely-related modules that marry read, type, and eval
+to load files and, you know, run a repl.</li>
+<li><b>core</b>, the primitive environment of lam</li>
+</ol>
+<p>You may notice other files in the repo.
+They are either leftovers from rewrites
+&ndash; which I plan on eventually rewriting themselves &ndash;
+or vendored dependencies:
+specifically <a href="https://github.com/meepen/Lua-5.1-UTF-8/">utf8</a>.</p>
+<p>Modules I still want to write but either need rewriting or ... writing include</p>
+<ul>
+<li><b>test</b>, the test suite</li>
+<li><b>lang</b>, a macro library</li>
+<li><b>errs</b> (or maybe <b>oops</b>), an error & debugging library</li>
+<li>... probably others</li>
+</ul>
+<p>That leaves one file unaccounted for:</p>
+<h2>util.lua</h2>
+<p>Since the util module isn't long or important enough for its own post,
+I'll quickly talk about it here.
+I hope to keep shrinking the size of util until I can delete this file
+(and section on this page) altogether.</p>
+<dl>
+<dt><code>util.error(desc, ...)</code></dt>
+<dd>This function wraps lua's <code>error</code> to make writing errors a
+little easier on myself.
+I'm not sure how helpful this is, really.
+I need to write another error-handling library to really make it work.
+</dd>
+<dt><code>util.pop(tbl)</code></dt>
+<dd>Another convenience fuction.
+Lua's <code>table.remove</code> removes an element from a table,
+but by default it removes it from the end.
+<code>pop</code> removes it from the beginning.
+</dd>
+</dl>
+<h2>shitty lisp club</h2>
+<p>I'm part of a little club where we're writing shitty lisps.
+Check us out at the
+<a href="https://tilde.zone/tags/shittylisp">#shittylisp hashtag</a> on fedi!
+(I think I've linked that right .. that's federation for you.)</p></main>]]></content>
+</entry>
+<entry>
+<id>https://funputer.biz//sofaware.html</id>
+<link rel="alternate" href="https://funputer.biz//sofaware.html" />
+<title>sofaware</title>
+<author><name>Case Duckworth</name></author>
+<updated>2024-04-21T03:14:23Z</updated>
+<content type="html"><![CDATA[<main><p>You may've noticed it's been a while since I've written anything about my wm in
+scheme.  That's because it's become <b>sofaware</b>, or softwares that have
+landed, comfortably, softly,
+on the <a href="https://tilde.town/~dozens/sofa/">sofa</a>.</p>
+<p>I have a lot of softwear on the sofa.
+In fact if you look at my <a href="https://git.acdw.net/">git thing</a>,
+you'll see plenty of projects that I've rested on the sofa.
+It's okay to set things on the sofa and maybe (or maybe not!)
+pick them back up again.</p>
+<p>This post has been inspired specifically by my project
+<a href="https://git.acdw.net/subtext">subtext</a>,
+which is an attempt at a groff-like,
+flexible document preparator using only POSIX shell and awk.
+It's a good idea,
+but it's a pain to keep track of all the state I need to to render correctly,
+and because of the layers of awk and shell that eventually generate html,
+it's <em>really hard</em> to debug issues.</p>
+<p>Even before I get to that problem though,
+I have the issue that I don't <em>really</em> know how I would organize it.
+There are a lot of options and I haven't fully thought them all out
+and decided on the best one.</p>
+<p>Ultimately, I've just lost interest in the thing.
+I keep trying to rewrite it,
+but keep getting frustrated.
+So on the sofa it has gone, and maybe later, it'll come off again.</p>
+<p>And that's okay.</p></main>]]></content>
+</entry>
+<entry>
+<id>https://funputer.biz//todo.html</id>
+<link rel="alternate" href="https://funputer.biz//todo.html" />
+<title>Funputer ideas</title>
+<author><name>Case Duckworth</name></author>
+<updated>2024-03-31T17:28:30Z</updated>
+<content type="html"><![CDATA[<main><p>These are all my todos for fonputer.com, from the "would be nice someday"s to
+the "this should happne soon frfr". Check back later for links to see if I did
+them!</p>
+<h2>post ideas</h2>
+<ul>
+<li>smart quotes</li>
+<li>escaping html</li>
+<li><a href="/licenses.html">licenses</a></li>
+<li>versioning schemes</li>
+</ul>
+<h2>site ideas</h2>
+<ul>
+<li><s><code>&lt;noscript&gt;</code> tags for nav</s></li>
+<li><s>figure out how to do folders in nav</s></li>
+<li><a href="/robots.txt">robots.txt</a>,
+<a href="/humans.txt">humans.txt</a></li>
+<li>colophon</li>
+<li>rss/atom feed</li>
+</ul></main>]]></content>
+</entry>
+</feed>

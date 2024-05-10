@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title><![CDATA[Lorem ipsum feed for an interval of 1 minutes with 10 item(s)]]></title>
+    <description><![CDATA[This is a constantly updating lorem ipsum feed]]></description>
+    <link>http://example.com/</link>
+    <generator>RSS for Node</generator>
+    <lastBuildDate>Sun, 05 May 2024 18:20:56 GMT</lastBuildDate>
+    <pubDate>Sun, 05 May 2024 18:20:00 GMT</pubDate>
+    <copyright><![CDATA[Michael Bertolacci, licensed under a Creative Commons Attribution 3.0 Unported License.]]></copyright>
+    <ttl>1</ttl>
+    <item>
+      <title><![CDATA[Lorem ipsum 2024-05-05T18:20:00Z]]></title>
+      <description><![CDATA[Aute cupidatat consequat tempor consequat exercitation culpa.]]></description>
+      <link>http://example.com/test/1714933200</link>
+      <guid isPermaLink="true">http://example.com/test/1714933200</guid>
+      <dc:creator><![CDATA[John Smith]]></dc:creator>
+      <pubDate>Sun, 05 May 2024 18:20:00 GMT</pubDate>
+    </item>
+   </channel>
+</rss>

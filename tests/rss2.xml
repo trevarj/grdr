@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>trev's website</title>
+<description>I am a programmer working with Rust in the crypto industry.</description>
+<language>en-us</language>
+<link>https://trevarj.github.io/rss.xml</link>
+<atom:link href="https://trevarj.github.io/rss.xml" rel="self" type="application/rss+xml" />
+
+<item>
+<title>A Late Start in Computer Programming</title>
+<guid>https://trevarj.github.io/posts/advice2noob.html</guid>
+<link>https://trevarj.github.io/posts/advice2noob.html</link>
+<pubDate>Mon, 11 Dec 2023 19:33:07 +0300</pubDate>
+<description><![CDATA[<div class="markdown-heading"><h1 class="heading-element">A Late Start in Computer Programming</h1><a id="user-content-a-late-start-in-computer-programming" class="anchor" aria-label="Permalink: A Late Start in Computer Programming" href="#a-late-start-in-computer-programming"><span aria-hidden="true" class="octicon octicon-link"/></a></div>
+]]></description>
+</item>
+</channel>
+</rss>
